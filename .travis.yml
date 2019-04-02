@@ -31,7 +31,7 @@ install:
   - pip install --upgrade pipenv
   - pipenv install --dev
 
-# perform testing:
+perform testing:
 # --> run the test suite with pytest and codecov
 # --> Check for black format
 # --> lint the functions with flake8

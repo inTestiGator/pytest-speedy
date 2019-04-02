@@ -39,7 +39,7 @@ install:
 # --> lint the functions with pylint
 # --> lint the test suites with pylint
 # --> lint the README documentation with mdl
-# script:
+script:
 #   - shopt -s globstar
 #   - pipenv run pytest --cov-config pytest.cov --cov
 #   - pipenv run black **/*.py --check
@@ -48,5 +48,5 @@ install:
 #   - mdl README.md
 
 # report coverage information to CodeCov
-# after_success:
-#   - pipenv run codecov
+after_success:
+  - pipenv run codecov

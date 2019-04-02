@@ -19,8 +19,8 @@ python:
 #     - secure: 2c0250fb-dfb1-45c9-abaf-cd3d874326c5
 #
 # # install mdl for checking Markdown
-# before_install:
-#   - gem install mdl
+before_install:
+  - gem install mdl
 #
 # notifications:
 #   email: never

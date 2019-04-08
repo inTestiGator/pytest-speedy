@@ -4,26 +4,26 @@ python:
   - "3.7"
   - "3.6"
 
-# cache:
-#   directories:
-#     - $HOME/.pip-cache/
+cache:
+  directories:
+    - $HOME/.pip-cache/
 
 # ignore the virtualenv that Travis creates
 # setup a secure login to CodeCov
-# env:
-#   global:
-#     - PIPENV_VENV_IN_PROJECT=1
-#     - PIPENV_IGNORE_VIRTUALENVS=1
-#     - LANG=en_US.UTF-8
-#     - LC_ALL=en_US.UTF-8
-#     - secure: 2c0250fb-dfb1-45c9-abaf-cd3d874326c5
-#
+env:
+  global:
+    - PIPENV_VENV_IN_PROJECT=1
+    - PIPENV_IGNORE_VIRTUALENVS=1
+    - LANG=en_US.UTF-8
+    - LC_ALL=en_US.UTF-8
+    - secure: 216ba04a-be30-458f-b73d-4452dc4ed5c3
+
 # # install mdl for checking Markdown
 before_install:
   - gem install mdl
-#
-# notifications:
-#   email: never
+
+notifications:
+  email: never
 
 # command to install dependencies
 install:

@@ -1,5 +1,4 @@
-"""  """
-import pytest
+""" Checks the tests with the fastest efficiency first """
 
 
 def pytest_addoption(parser):
@@ -13,7 +12,7 @@ def pytest_addoption(parser):
 
 
 def pytest_report_header():
-    """  """
+    """ Display test message in the header """
     msg = print("TEST\nInital Set up for Conftest to Test pytest-speedy\nTEST")
 
     return msg

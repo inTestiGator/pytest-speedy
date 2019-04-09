@@ -3,6 +3,7 @@
 from termfrequency import compute_tf_cookbook
 import pytest
 import datetime
+import requests as request
 
 @pytest.fixture(autouse=True)
 def test_check_duration(request, cache):
@@ -21,7 +22,7 @@ def test_check_duration(request, cache):
 
 
 def test_read_file_populates_data(test_check_duration):
-    test_check_duration(request, cache)
+    # test_check_duration(request, cache)
     """Checks that reading the file populates global data variable"""
     # pylint: disable=len-as-condition
     assert len(compute_tf_cookbook.data) == 0
@@ -30,7 +31,7 @@ def test_read_file_populates_data(test_check_duration):
 
 
 def test_filter_chars_and_normalize_data(test_check_duration):
-    test_check_duration(request, cache)
+    # test_check_duration(request, cache)
     """Checks that the singleline comment count works"""
     # pylint: disable=len-as-condition
     compute_tf_cookbook.data = ["-", "and"]

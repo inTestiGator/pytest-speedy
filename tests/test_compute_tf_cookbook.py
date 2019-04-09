@@ -5,15 +5,16 @@ import pytest
 import datetime
 import requests as request
 
+
 @pytest.fixture(autouse=True)
 def test_check_duration(request, cache):
-    print ("this is check duration")
+    print("this is check duration")
     key = "duration/" + request.node.nodeid.replace(";", "_")
     # nodeid's can have colons
     # keys become filenames within .cache
     # replace colons with something filename safe
     start_time = datetime.datetime.now()
-    #yield
+    # yield
     stop_time = datetime.datetime.now()
     this_duration = (stop_time - start_time).total_seconds()
     last_duration = cache.get(key, None)

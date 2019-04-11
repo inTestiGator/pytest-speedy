@@ -5,7 +5,7 @@ import pytest
 import datetime
 import requests as request
 
-
+# use "pipenv run pytest -s" to run this fixture
 @pytest.fixture(autouse=True)
 def test_check_duration(request, cache):
     print("this is check duration")

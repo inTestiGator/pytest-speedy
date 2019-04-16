@@ -1,4 +1,4 @@
 [run]
 # omit the tests for test coverage monitoring
-omit=tests/*
+omit=tests/*, .venv/*
 include=pytest_speedy*

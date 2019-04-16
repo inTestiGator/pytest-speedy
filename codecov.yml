@@ -19,4 +19,4 @@ coverage:
     changes:
       default:
         enabled: no
-if_not_found: success
+        if_not_found: success

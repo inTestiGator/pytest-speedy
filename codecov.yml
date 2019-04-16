@@ -1,4 +1,5 @@
 codecov:
+  token: 216ba04a-be30-458f-b73d-4452dc4ed5c3
   max_report_age: off
 
 comment: false
@@ -18,4 +19,4 @@ coverage:
     changes:
       default:
         enabled: no
-if_not_found: success
+        if_not_found: success

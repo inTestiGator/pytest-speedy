@@ -2,7 +2,7 @@
 
 
 def pytest_addoption(parser):
-    """ Print stuff to header with --speedy """
+    """ Print speed of tests to header with --speedy """
     group = parser.getgroup("speedy")
     group.addoption(
         "--speedy",

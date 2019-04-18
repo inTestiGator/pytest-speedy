@@ -17,7 +17,7 @@ def test_check_duration(cache):
     # yield
     stop_time = datetime.datetime.now()
     this_duration = (stop_time - start_time).total_seconds()
-    last_duration = cache.get(key, None)
+#     last_duration = cache.get(key, None)
     cache.set(key, this_duration)
     print(this_duration)
 

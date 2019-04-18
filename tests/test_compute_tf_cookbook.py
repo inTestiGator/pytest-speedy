@@ -3,7 +3,7 @@
 from termfrequency import compute_tf_cookbook
 import pytest
 import datetime
-import requests as request
+# import requests as request
 
 # use "pipenv run pytest -s" to run this fixture
 @pytest.fixture(autouse=True)

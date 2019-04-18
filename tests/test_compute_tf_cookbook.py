@@ -35,7 +35,6 @@ def test_read_file_populates_data(test_check_duration):
 def test_filter_chars_and_normalize_data(test_check_duration):
     # test_check_duration(request, cache)
     """Checks that the singleline comment count works"""
-    # pylint: disable=len-as-condition
     compute_tf_cookbook.data = ["-", "and"]
     compute_tf_cookbook.filter_chars_and_normalize()
     assert compute_tf_cookbook.data == [" ", "and"]

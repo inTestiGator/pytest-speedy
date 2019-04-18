@@ -8,6 +8,7 @@ import datetime
 # use "pipenv run pytest -s" to run this fixture
 @pytest.fixture(autouse=True)
 def test_check_duration(cache):
+    """ Docstring """
     print("this is check duration")
     key = "duration/" + request.node.nodeid.replace(";", "_")
     # nodeid's can have colons

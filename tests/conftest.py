@@ -21,9 +21,6 @@ def pytest_report_header():
     return msg
 
 
-"""Configuration file for the test suite"""
-
-
 GO_BACK_A_DIRECTORY = "/../"
 GO_INTO_SRC_DIRECTORY = "src"
 

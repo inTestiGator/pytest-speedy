@@ -1,8 +1,8 @@
 """Test cases for the module that uses a cookbook programming style"""
 
-from termfrequency import compute_tf_cookbook
-import pytest
 import datetime
+import pytest
+from termfrequency import compute_tf_cookbook
 # import requests as request
 
 # use "pipenv run pytest -s" to run this fixture

@@ -2,8 +2,8 @@
 
 import datetime
 import pytest
+import requests as request
 from termfrequency import compute_tf_cookbook
-# import requests as request
 
 # use "pipenv run pytest -s" to run this fixture
 @pytest.fixture(autouse=True)

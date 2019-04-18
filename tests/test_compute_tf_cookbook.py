@@ -23,7 +23,7 @@ def test_check_duration(request, cache):
     print(this_duration)
 
 
-def test_read_file_populates_data(test_check_duration):
+def test_read_file_populates_data():
     # test_check_duration(request, cache)
     """Checks that reading the file populates global data variable"""
     # pylint: disable=len-as-condition
@@ -32,7 +32,7 @@ def test_read_file_populates_data(test_check_duration):
     assert len(compute_tf_cookbook.data) != 0
 
 
-def test_filter_chars_and_normalize_data(test_check_duration):
+def test_filter_chars_and_normalize_data():
     # test_check_duration(request, cache)
     """Checks that the singleline comment count works"""
     compute_tf_cookbook.data = ["-", "and"]

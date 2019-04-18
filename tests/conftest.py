@@ -5,7 +5,7 @@ import sys
 
 
 def pytest_addoption(parser):
-    """ Print stuff to header with --speedy """
+    """ Print speed of tests to header with --speedy """
     group = parser.getgroup("speedy")
     group.addoption(
         "--speedy",
@@ -15,7 +15,7 @@ def pytest_addoption(parser):
 
 
 def pytest_report_header():
-    """ Display test message in the header """
+    """ Reports Message to display in pytest header """
     msg = print("TEST\nInital Set up for Conftest to Test pytest-speedy\nTEST")
 
     return msg

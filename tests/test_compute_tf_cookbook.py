@@ -7,7 +7,7 @@ from termfrequency import compute_tf_cookbook
 
 # use "pipenv run pytest -s" to run this fixture
 @pytest.fixture(autouse=True)
-def test_check_duration(cache):
+def test_check_duration(request, cache):
     """ Docstring """
     print("this is check duration")
     key = "duration/" + request.node.nodeid.replace(";", "_")

@@ -25,3 +25,5 @@ def sort(Dict):
     """
     return sorted(Dict.items(), key=operator.itemgetter(1))
 
+
+print(sort(Dict))

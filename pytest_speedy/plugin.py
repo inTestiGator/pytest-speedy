@@ -1,8 +1,10 @@
+"""This is undocumented"""
+
 import operator
 
 
 Dict = {"test1": 3, "test2": 2, "test3": 1}
-print(Dict)
+# print(Dict)
 
 
 def frequencies(word_list):
@@ -19,6 +21,7 @@ def frequencies(word_list):
     return word_freqs
 
 
+# pylint: disable=redefined-outer-name
 def sort(Dict):
     """
     Takes a dictionary of timings and returns a list sorted by speed,

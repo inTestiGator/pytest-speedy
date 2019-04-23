@@ -18,7 +18,7 @@ def pytest_report_header():
     return msg
 
    
- def pytest_collect_file(path, parent):
-    """ Hook to save duration of tests in a txt file """
-  if path.ext == '.py':
-    return PyCollector(path=path, parent=parent)
+#  def pytest_collect_file(path, parent):
+#     """ Hook to save duration of tests in a txt file """
+#   if path.ext == '.py':
+#     return PyCollector(path=path, parent=parent)

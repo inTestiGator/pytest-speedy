@@ -4,6 +4,7 @@ import operator
 Dict = {"test1": 3, "test2": 2, "test3": 1}
 print(Dict)
 
+
 def frequencies(word_list):
     """
     Takes a list of words and returns a dictionary associating

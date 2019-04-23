@@ -9,3 +9,7 @@ def pytest_collection_modifyitems(session, config, items):
    :param _pytest.config.Config config: pytest config object
    :param List[_pytest.nodes.Item] items: list of item objects
    """
+
+Dict = {"test1": 3, "test2": 2, "test3": 1}
+print(Dict)
+

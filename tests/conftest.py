@@ -24,10 +24,20 @@ def pytest_report_header():
 def pytest_collect_file(path, parent):
     """ Hook to save duration of tests in a txt file """
     if path.ext == '.yaml':
-        return YamlCollector(path=path, parent=parent)
+        return None
     if path.ext == '.py':
         # here it's a regular .py file that should be handled by pytest the normal way
         return None
+
+
+# def pytest_runtest_call(item):
+#     """ """
+#     print("something happened")
+#
+#
+# def pytest_runtest_makereport(item, call):
+#     """ """
+#     print("it works")
 
 
 GO_BACK_A_DIRECTORY = "/../"

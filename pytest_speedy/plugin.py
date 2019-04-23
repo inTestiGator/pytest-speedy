@@ -3,7 +3,7 @@
 import operator
 
 
-Dict = {"test1": 3, "test2": 2, "test3": 1}
+Dict = {"test1": 3.7, "test2": 2.6, "test3": 1.3}
 # print(Dict)
 
 

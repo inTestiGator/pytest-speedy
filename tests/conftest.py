@@ -3,43 +3,6 @@
 import os
 import sys
 
-
-def pytest_addoption(parser):
-    """ Print speed of tests to header with --speedy """
-    group = parser.getgroup("speedy")
-    group.addoption(
-        "--speedy",
-        action="store_true",
-        help="pytest-speedy help \n--speedy: runs the fastest test first",
-    )
-
-
-def pytest_report_header():
-    """ Reports Message to display in pytest header """
-    msg = print("TEST\nInital Set up for Conftest to Test pytest-speedy\nTEST")
-
-    return msg
-
-
-def pytest_collect_file(path, parent):
-    """ Hook to save duration of tests in a txt file """
-    if path.ext == '.yaml':
-        return None
-    if path.ext == '.py':
-        # here it's a regular .py file that should be handled by pytest the normal way
-        return None
-
-
-# def pytest_runtest_call(item):
-#     """ """
-#     print("something happened")
-#
-#
-# def pytest_runtest_makereport(item, call):
-#     """ """
-#     print("it works")
-
-
 GO_BACK_A_DIRECTORY = "/../"
 GO_INTO_SRC_DIRECTORY = "src"
 

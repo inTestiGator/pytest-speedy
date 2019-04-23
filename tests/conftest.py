@@ -1,4 +1,4 @@
-""" Checks the tests with the fastest efficiency first """
+"""Configuration file for the test suite"""
 
 import os
 import sys

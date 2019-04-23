@@ -17,3 +17,11 @@ def frequencies(word_list):
             word_freqs[i] = 1
     return word_freqs
 
+
+def sort(Dict):
+    """
+    Takes a dictionary of timings and returns a list sorted by speed,
+    in order from fastest to slowest.
+    """
+    return sorted(Dict.items(), key=operator.itemgetter(1))
+

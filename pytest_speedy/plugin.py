@@ -7,6 +7,16 @@ Dict = {"test1": 3.7, "test2": 2.6, "test3": 1.3}
 # print(Dict)
 
 
+def read_file(path_to_file):
+    """
+    Takes a path to a file and returns the entire
+    contents of the file as a string
+    """
+    with open(path_to_file) as f:
+        data = f.read()
+    return data
+
+
 def frequencies(word_list):
     """
     Takes a list of words and returns a dictionary associating

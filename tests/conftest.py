@@ -25,7 +25,7 @@ def pytest_collect_file(path, parent):
     """ Hook to save duration of tests in a txt file """
     if path.ext == '.yaml':
         return YamlCollector(path=path, parent=parent)
-    if ext == '.py':
+    if path.ext == '.py':
         # here it's a regular .py file that should be handled by pytest the normal way
         return None
 

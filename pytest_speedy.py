@@ -16,3 +16,9 @@ def pytest_report_header():
     msg = print("TEST\nInital Set up for Conftest to Test pytest-speedy\nTEST")
 
     return msg
+
+   
+ def pytest_collect_file(path, parent):
+    """ Hook to save duration of tests in a txt file """
+  if path.ext == '.py':
+    return PyCollector(path=path, parent=parent)

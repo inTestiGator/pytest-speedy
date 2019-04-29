@@ -30,6 +30,7 @@ install:
   - pip install --upgrade pip
   - pip install --upgrade pipenv
   - pipenv install --dev
+  - pipenv install codecov
 
 perform testing:
 # --> run the test suite with pytest and codecov
@@ -49,4 +50,4 @@ script:
 
 # report coverage information to CodeCov
 after_success:
-  - pipenv run codecov
+  - codecov

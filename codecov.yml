@@ -20,3 +20,5 @@ coverage:
       default:
         enabled: no
         if_not_found: success
+    fixes:
+      - "before/test-*::after/"

@@ -12,7 +12,9 @@ def pytest_addoption(parser):
 
 
 def pytest_report_header():
-    """ Display test message in the header """
-    msg = print("TEST\nInital Set up for Conftest to Test pytest-speedy\nTEST")
-
-    return msg
+    """
+    The program is executed via the execution function
+    if speedy is called in the terminal window
+    """
+    if pytest.config.getoption("speedy")
+        execution()

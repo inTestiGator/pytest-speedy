@@ -18,3 +18,8 @@ def pytest_report_header():
     """
     if pytest.config.getoption("speedy")
         execution()
+
+
+def execution():
+    """ Docstring """
+    testFile = open("tests/test_compute_tf_cookbook.py", "r")

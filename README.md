@@ -12,20 +12,15 @@ A pytest plug-in that checks the tests with the fastest efficiency first.
 
 ## General Description
 
-This pytest plugin will run by reordering the test cases so that the test case
-with the fastest running time will be tested first. The plugin will go through
-all of the test cases, record the run time from the fastest to slowest and then
-test them in that order.
+Pytest-Speedy is a plugin for pytest that allows users to run the fastest and most efficient test cases first. This will allow an overall faster runtime for programs running test cases.
 
 ## Features
 
 (Add in features about pytest-speedy)
-
+In Pytest-Speedy, we want to provide optimal test case runtime for your programs. Our main features are checking the runtime of each test case that you have, storing that information, and then using that information to reorder the test cases. The tests cases will run in ascending order for their runtimes so that the smaller runtimes will run first and the larger runtimes will be run last.
 
 ## Usage of pytest-speedy
 
-(Add in details about what version of Python the plug-in is configured too as
-  well as how to update or install Python)
 To be able to run Pytest Speedy, the user will need the Python version 3.6.7 or the most recent version. The user will also need the Pipenv version 2018.11.26.
 
 * If the user does not have the correct Python version, please follow this link to update your Python version:

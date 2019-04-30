@@ -8,7 +8,7 @@ setup(
     description="A pytest plugin that reorders test cases from fastest to slowest.",
     url="url here",
     author="Matt Marconi, Ben Watto, Dillon Thoma, Mikey Spurr, Steve Li",
-    author_email="email here",
+    author_email="marconim@alleghney.edu, wattob@allegheny.edu, thomad@allegheny.edu, ",
     license="Pytest-Speedy Copyright ",
     py_modules=["pytest_speedy"],
     install_requires=["pytest"],

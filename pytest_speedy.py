@@ -35,7 +35,6 @@ def execution():
     list = [
         item
         for item in ast.parse(read_file.read()).body
-
         if isinstance(item, ast.FunctionDef)
     ]
     for i in list:

@@ -5,21 +5,21 @@ import pytest
 from termfrequency import compute_tf_cookbook
 
 # use "pipenv run pytest -s" to run this fixture
-@pytest.fixture(autouse=True)
-def test_check_duration(request, cache):
-    """ Docstring """
-    print("this is check duration")
-    key = "duration/" + request.node.nodeid.replace(";", "_")
-    # nodeid's can have colons
-    # keys become filenames within .cache
-    # replace colons with something filename safe
-    start_time = datetime.datetime.now()
-    # yield
-    stop_time = datetime.datetime.now()
-    this_duration = (stop_time - start_time).total_seconds()
-    #     last_duration = cache.get(key, None)
-    cache.set(key, this_duration)
-    print(this_duration)
+# @pytest.fixture(autouse=True)
+# def test_check_duration(request, cache):
+#     """ Docstring """
+#     print("this is check duration")
+#     key = "duration/" + request.node.nodeid.replace(";", "_")
+#     # nodeid's can have colons
+#     # keys become filenames within .cache
+#     # replace colons with something filename safe
+#     start_time = datetime.datetime.now()
+#     # yield
+#     stop_time = datetime.datetime.now()
+#     this_duration = (stop_time - start_time).total_seconds()
+#     #     last_duration = cache.get(key, None)
+#     cache.set(key, this_duration)
+#     print(this_duration)
 
 
 def test_read_file_populates_data():

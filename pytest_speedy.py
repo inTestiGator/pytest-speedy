@@ -23,10 +23,18 @@ def pytest_report_header():
         execution()
 
 
-def execution():
+@pytest.fixture(autouse=True)
+def execution(request, cache):
     """ Docstring """
-    testFile = open("tests/test_compute_tf_cookbook.py", "r")
-    nodes = [
-        item for item in ast.parse(testFile.read()).body
-        if isinstance(item, ast.FunctionDef)
-    ]
+    print("this is check duration")
+    key = "duration/" + request.node.nodeid.replace(";", "_")
+    # nodeid's can have colons
+    # keys become filenames within .cache
+    # replace colons with something filename safe
+    start_time = datetime.datetime.now()
+    # yield
+    stop_time = datetime.datetime.now()
+    this_duration = (stop_time - start_time).total_seconds()
+    #     last_duration = cache.get(key, None)
+    cache.set(key, this_duration)
+    print(this_duration)

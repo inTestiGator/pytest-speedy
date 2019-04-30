@@ -4,6 +4,7 @@ import ast
 import datetime
 import pytest
 
+
 def pytest_addoption(parser):
     """ Print speed of tests to header with --speedy """
     group = parser.getgroup("speedy")

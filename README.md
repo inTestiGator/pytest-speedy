@@ -31,29 +31,29 @@ https://www.python.org/downloads/
 * If the user does not have the correct Pipenv version, please use this command in your terminal window to update your Pipenv version:
 
 ```
-$ pip install --user --upgrade pipenv
+pip install --user --upgrade pipenv
 ```
 
 Now once the user has the correct versions for Python and Pipenv, cloning into the repository is needed. In order to do this, the user will need to enter this command into their terminal window:
 
 ```
-$ git clone git@github.com:inTestiGator/pytest-speedy.git
+git clone git@github.com:inTestiGator/pytest-speedy.git
 ```
 
 After the user has cloned into the repository, the pipenv dependencies must be installed by entering this command into the terminal window:
 
 ```
-$ pipenv install --dev  or  $ pipenv install -d
+pipenv install --dev  or  $ pipenv install -d
 ```
 
 After the user has installed the dependencies, the next step is the setup of Pytest Speedy. To setup Pytest Speedy, the user will need to enter this command into their terminal window:
 
 ```
-$ python3 setup.py install
+python3 setup.py install
 ```
 
 Now the user is able to run Pytest Speedy by entering this command into the terminal window:
 
 ```
-$ pytest -s
+pytest -s
 ```

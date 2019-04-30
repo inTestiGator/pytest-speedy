@@ -38,3 +38,7 @@ def execution(request, cache):
     #     last_duration = cache.get(key, None)
     cache.set(key, this_duration)
     print(this_duration)
+
+
+def pytest_collection_modifyitems(items):
+    """ Used to reorder the tests """

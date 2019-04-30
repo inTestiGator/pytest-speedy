@@ -1,5 +1,8 @@
 """ Checks the tests with the fastest efficiency first """
 
+import ast
+import inspect
+import pytest
 
 def pytest_addoption(parser):
     """ Print speed of tests to header with --speedy """

@@ -26,5 +26,9 @@ test them in that order.
 
 (Add in details about what version of Python the plug-in is configured too as
   well as how to update or install Python)
-* In order to use this pytest plug-in, you will need to run this command in the terminal window: "pipenv run pytest -s"
-* This plug-in is configured to Python Version 3.7 
+To be able to run Pytest Speedy, the user will need the Python version 3.6.7 or the most recent version. The user will also need the Pipenv version 2018.11.26.
+
+* If the user does not have the correct Python version, please follow this link to update your Python version:
+  * https://www.python.org/downloads/
+* If the user does not have the correct Pipenv version, please use this command in your terminal window to update your Pipenv version:
+  * $ pip install --user --upgrade pipenv

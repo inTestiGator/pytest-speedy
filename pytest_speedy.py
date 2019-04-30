@@ -26,3 +26,7 @@ def pytest_report_header():
 def execution():
     """ Docstring """
     testFile = open("tests/test_compute_tf_cookbook.py", "r")
+    nodes = [
+        item for item in ast.parse(testFile.read()).body
+        if isinstance(item, ast.FunctionDef)
+    ]

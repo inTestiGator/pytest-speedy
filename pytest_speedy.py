@@ -20,6 +20,7 @@ def pytest_report_header():
     The program is executed via the execution function
     if speedy is called in the terminal window
     """
+    # pylint: disable=no-member
     if pytest.config.getoption("speedy"):
         execution()
 
@@ -27,10 +28,12 @@ def pytest_report_header():
 # @pytest.fixture(autouse=True)
 def execution():
     """ Docstring """
+    # pylint: disable=redefined-builtin
     read_file = open("tests/test_compute_tf_cookbook.py")
     list = [
         item
         for item in ast.parse(read_file.read()).body
+        # pylint: disable=unused-variable
         if isinstance(item, ast.FunctionDef)
     ]
     for i in list:
@@ -45,6 +48,7 @@ def execution():
         this_duration = (stop_time - start_time).total_seconds()
         #     last_duration = cache.get(key, None)
         # cache.set(key, this_duration)
+        # pylint: disable=unused-argument
         print(this_duration)
 
 

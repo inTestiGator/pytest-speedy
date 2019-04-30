@@ -24,7 +24,8 @@ def pytest_report_header():
     if pytest.config.getoption("speedy"):
         execution()
 
-
+# pylint: disable=unused-variable
+# pylint: disable=unused-argument
 # @pytest.fixture(autouse=True)
 def execution():
     """ Docstring """
@@ -33,7 +34,7 @@ def execution():
     list = [
         item
         for item in ast.parse(read_file.read()).body
-        # pylint: disable=unused-variable
+
         if isinstance(item, ast.FunctionDef)
     ]
     for i in list:

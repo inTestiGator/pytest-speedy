@@ -16,7 +16,6 @@ Pytest-Speedy is a plugin for pytest that allows users to run the fastest and mo
 
 ## Features
 
-(Add in features about pytest-speedy)
 In Pytest-Speedy, we want to provide optimal test case runtime for your programs. Our main features are checking the runtime of each test case that you have, storing that information, and then using that information to reorder the test cases. The tests cases will run in ascending order for their runtimes so that the smaller runtimes will run first and the larger runtimes will be run last.
 
 ## Usage of pytest-speedy

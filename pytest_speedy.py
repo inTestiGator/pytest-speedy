@@ -1,5 +1,8 @@
 """ Checks the tests with the fastest efficiency first """
 
+import ast
+import inspect
+import pytest
 
 def pytest_addoption(parser):
     """ Print speed of tests to header with --speedy """
@@ -12,7 +15,18 @@ def pytest_addoption(parser):
 
 
 def pytest_report_header():
-    """ Display test message in the header """
-    msg = print("TEST\nInital Set up for Conftest to Test pytest-speedy\nTEST")
+    """
+    The program is executed via the execution function
+    if speedy is called in the terminal window
+    """
+    if pytest.config.getoption("speedy")
+        execution()
 
-    return msg
+
+def execution():
+    """ Docstring """
+    testFile = open("tests/test_compute_tf_cookbook.py", "r")
+    nodes = [
+        item for item in ast.parse(testFile.read()).body
+        if isinstance(item, ast.FunctionDef)
+    ]

@@ -24,6 +24,7 @@ def pytest_report_header():
     if pytest.config.getoption("speedy"):
         execution()
 
+
 # pylint: disable=unused-variable
 # pylint: disable=unused-argument
 # @pytest.fixture(autouse=True)

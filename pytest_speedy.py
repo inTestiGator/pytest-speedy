@@ -1,6 +1,7 @@
 """ Checks the tests with the fastest efficiency first """
 
 import ast
+import datetime
 import inspect
 import pytest
 
@@ -19,26 +20,33 @@ def pytest_report_header():
     The program is executed via the execution function
     if speedy is called in the terminal window
     """
-    if pytest.config.getoption("speedy")
+    if pytest.config.getoption("speedy"):
         execution()
 
 
-@pytest.fixture(autouse=True)
-def execution(request, cache):
+# @pytest.fixture(autouse=True)
+def execution():
     """ Docstring """
-    print("this is check duration")
-    key = "duration/" + request.node.nodeid.replace(";", "_")
-    # nodeid's can have colons
-    # keys become filenames within .cache
-    # replace colons with something filename safe
-    start_time = datetime.datetime.now()
-    # yield
-    stop_time = datetime.datetime.now()
-    this_duration = (stop_time - start_time).total_seconds()
-    #     last_duration = cache.get(key, None)
-    cache.set(key, this_duration)
-    print(this_duration)
+    read_file = open("tests/test_compute_tf_cookbook.py")
+    list = [
+        item
+        for item in ast.parse(read_file.read()).body
+        if isinstance(item, ast.FunctionDef)
+    ]
+    for i in list:
+        print("this is check duration")
+        # key = "duration/" + request.node.nodeid.replace(";", "_")
+        # nodeid's can have colons
+        # keys become filenames within .cache
+        # replace colons with something filename safe
+        start_time = datetime.datetime.now()
+        # yield
+        stop_time = datetime.datetime.now()
+        this_duration = (stop_time - start_time).total_seconds()
+        #     last_duration = cache.get(key, None)
+        # cache.set(key, this_duration)
+        print(this_duration)
 
 
 def pytest_collection_modifyitems(items):
-    """ Used to reorder the tests """
+    """ reordering """

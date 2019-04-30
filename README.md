@@ -14,13 +14,17 @@ A pytest plug-in that checks the tests with the fastest efficiency first.
 
 This pytest plugin will run by reordering the test cases so that the test case
 with the fastest running time will be tested first. The plugin will go through
-all of the test cases, record the run time from the fastest to slowest and then test them in that order.
+all of the test cases, record the run time from the fastest to slowest and then
+test them in that order.
 
 ## Features
 
 (Add in features about pytest-speedy)
 
+
 ## Usage of pytest-speedy
 
 (Add in details about what version of Python the plug-in is configured too as
   well as how to update or install Python)
+* In order to use this pytest plug-in, you will need to run this command in the terminal window: "pipenv run pytest -s"
+* This plug-in is configured to Python Version 3.7 

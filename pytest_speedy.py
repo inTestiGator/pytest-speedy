@@ -2,7 +2,6 @@
 
 import ast
 import datetime
-import inspect
 import pytest
 
 def pytest_addoption(parser):

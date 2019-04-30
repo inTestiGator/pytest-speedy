@@ -12,7 +12,9 @@ A pytest plug-in that checks the tests with the fastest efficiency first.
 
 ## General Description
 
-Pytest-Speedy is a plugin for pytest that allows users to run the fastest and most efficient test cases first. This will allow an overall faster runtime for programs running test cases.
+Pytest-Speedy is a plugin for pytest that allows users to run the fastest and
+most efficient test cases first. This will allow an overall faster runtime for
+programs running test cases.
 
 ## Features
 

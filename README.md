@@ -12,7 +12,9 @@ A pytest plug-in that checks the tests with the fastest efficiency first.
 
 ## General Description
 
-(Add in the purpose of pytest-speedy)
+This pytest plugin will run by reordering the test cases so that the test case
+with the fastest running time will be tested first. The plugin will go through
+all of the test cases, record the run time from the fastest to slowest and then test them in that order.
 
 ## Features
 

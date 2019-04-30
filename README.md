@@ -32,3 +32,9 @@ To be able to run Pytest Speedy, the user will need the Python version 3.6.7 or 
   * https://www.python.org/downloads/
 * If the user does not have the correct Pipenv version, please use this command in your terminal window to update your Pipenv version:
   * $ pip install --user --upgrade pipenv
+
+Now once the user has the correct versions for Python and Pipenv, cloning into the repository is needed. In order to do this, the user will need to enter this command into their terminal window:
+  * $ git clone git@github.com:inTestiGator/pytest-speedy.git
+
+After the user has cloned into the repository, the pipenv dependencies must be installed by entering this command into the terminal window:
+  * $ pipenv install --dev  or  $ pipenv install -d

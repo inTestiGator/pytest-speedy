@@ -71,5 +71,5 @@ Now the user is able to run Pytest Speedy by entering this command into the
 terminal window:
 
 ```
-pytest -s
+pytest --speedy
 ```

@@ -17,7 +17,6 @@ pygithub = "*"
 gitpython = "*"
 black = "*"
 pytest-cov = "*"
-codecov = "*"
 
 [packages]
 

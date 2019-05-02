@@ -42,7 +42,7 @@ perform testing:
 # --> lint the README documentation with mdl
 script:
   - shopt -s globstar
-  - pipenv run pytest --cov-config pytest.cov --cov
+  - pipenv run pytest tests/test_speedy.py --cov-config pytest.cov --cov
   - pipenv run black **/*.py --check
   - pipenv run flake8 **/*.py
   - pipenv run pylint **/*.py
@@ -50,4 +50,4 @@ script:
 
 # report coverage information to CodeCov
 after_success:
-  - codecov
+  - pipenv run codecov

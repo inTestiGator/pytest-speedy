@@ -83,7 +83,7 @@ def sort(items):
     print(new_duration)
     # return sorted(sortedList.sort(ret_value))
 
-
+# pylint: disable = redefined-builtin
 def test(list):
     """ Example test one. """
     print("Test1: True")

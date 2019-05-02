@@ -49,6 +49,7 @@ def pytest_report_header():
 
 def profile(f):
     """ Function for profile method """
+    # pylint: disable = global-statement
     global this_duration
     @wraps(f)
     def profilewrapper(*arg, **kw):

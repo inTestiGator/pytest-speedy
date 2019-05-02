@@ -38,7 +38,6 @@ def pytest_report_header():
         for func in tracked_functions:
             globals()[func.__name__] = profile(func)
 
-
             # print(profile(test))
         # pylint: disable = unused-variable
         # pylint: disable = assignment-from-no-return
@@ -82,6 +81,7 @@ def sort(items):
     print("reordering:")
     print(new_duration)
     # return sorted(sortedList.sort(ret_value))
+
 
 # pylint: disable = redefined-builtin
 def test(list):

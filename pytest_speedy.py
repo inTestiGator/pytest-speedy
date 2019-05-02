@@ -3,6 +3,7 @@
 from functools import wraps
 import time
 import pytest
+import sys
 
 this_duration = []
 tracked_functions = []
@@ -40,7 +41,7 @@ def pytest_report_header():
             # print(profile(test))
         # pylint: disable = unused-variable
         # pylint: disable = assignment-from-no-return
-        # sortedList = sort(test2(test(test3(sys.argv[1]))))
+        sortedList = sort(test2(test(test3(sys.argv[1]))))
         # for i in sortedList[i]:
         #     print(i)
 

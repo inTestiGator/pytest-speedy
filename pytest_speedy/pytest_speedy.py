@@ -7,6 +7,7 @@ import time
 
 this_duration = []
 tracked_functions = []
+# pylint: disable = redefined-outer-name 
 sortedList = []
 
 

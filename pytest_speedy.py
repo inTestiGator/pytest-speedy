@@ -1,14 +1,13 @@
 """ Checks the tests with the fastest efficiency first """
 
 from functools import wraps
+import sys
 import time
 import pytest
-import sys
 
 this_duration = []
 tracked_functions = []
 # pylint: disable = redefined-outer-name
-sortedList = []
 
 
 def pytest_addoption(parser):

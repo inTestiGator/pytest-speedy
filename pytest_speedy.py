@@ -1,13 +1,15 @@
 """ Checks the tests with the fastest efficiency first """
 
 from functools import wraps
+import sys
 import time
 import pytest
 
 this_duration = []
 tracked_functions = []
-# pylint: disable = redefined-outer-name
 sortedList = []
+
+# pylint: disable = redefined-outer-name
 
 
 def pytest_addoption(parser):
@@ -27,6 +29,7 @@ def pytest_report_header():
     """
     # pylint: disable = global-statement
     global tracked_functions
+    global sortedList
     # pylint: disable=no-member
     if pytest.config.getoption("speedy"):
         # execution()
@@ -40,9 +43,8 @@ def pytest_report_header():
             # print(profile(test))
         # pylint: disable = unused-variable
         # pylint: disable = assignment-from-no-return
-        # sortedList = sort(test2(test(test3(sys.argv[1]))))
-        # for i in sortedList[i]:
-        #     print(i)
+        sortedList = sort(test2(test(test3(sys.argv[1]))))
+        print(sortedList)
 
 
 def profile(f):
@@ -74,8 +76,6 @@ def profile(f):
 # pylint: disable = unused-argument
 def sort(items):
     """ Function for sort """
-    # pylint: disable = global-statement
-    global sortedList
     new_duration = sorted(this_duration)
     print(this_duration)
     print("reordering:")

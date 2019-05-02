@@ -12,6 +12,7 @@ import inspect
 from functools import wraps
 
 this_duration = []
+tracked_functions = []
 
 def pytest_addoption(parser):
     """ Print speed of tests to header with --speedy """

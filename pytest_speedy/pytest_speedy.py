@@ -63,12 +63,12 @@ def profile(f):
     return profilewrapper
 
 
-def pytest_collection_modifyitems(items):
-    """ reordering """
-    read_file = open("tests/test_compute_tf_cookbook.py")
-    for item in items:
-        funcItem = item.function
-        profile(funcItem)
+# def pytest_collection_modifyitems(items):
+#     """ reordering """
+#     read_file = open("tests/test_compute_tf_cookbook.py")
+#     for item in items:
+#         funcItem = item.function
+#         profile(funcItem)
 
     # Sorting list of Integers in ascending
 

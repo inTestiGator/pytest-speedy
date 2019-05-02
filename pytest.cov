@@ -2,4 +2,4 @@
 # omit the tests for test coverage monitoring
 omit=tests/*, tests/*
 # run modules in src
-include=pytest_speedy/*.py, termfrequency/*.py
+include=pytest_speedy/*.py

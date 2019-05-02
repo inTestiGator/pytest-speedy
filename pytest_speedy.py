@@ -98,18 +98,35 @@ def profile(f):
 def pytest_collection_modifyitems(items):
     """ reordering """
     read_file = open("tests/test_compute_tf_cookbook.py")
-    print(this_duration)
-    new_duration = sorted(this_duration)
-    for i in new_duration:
-        print("")
-        print("Reordering:")
-        # key = "duration/" + request.node.nodeid.replace(";", "_")
-        # nodeid's can have colons
-        # keys become filenames within .cache
-        # replace colons with something filename safe
-        # last_duration = cache.get(key, None)
-        # cache.set(key, this_duration)
-        # pylint: disable=unused-argument
-        print(new_duration)
-        print("")
+    for item in items:
+        funcItem = item.function
+        profile(funcItem)
+
     # Sorting list of Integers in ascending
+
+def sort(items):
+    """ Function for sort """
+    global sortedList
+    new_duration = sorted(this_duration)
+    print(this_duration)
+    print("reordering:")
+    print(new_duration)
+    # return sorted(sortedList.sort(ret_value))
+
+
+def test(list):
+    print("Test1: True")
+    return list
+
+
+def test2(list):
+    print("test2")
+    print("Success?")
+    print("Success?")
+
+
+
+def test3(list):
+    print("test2")
+    print("Success?")
+    print("Success?")

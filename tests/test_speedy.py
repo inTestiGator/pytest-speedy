@@ -1,4 +1,5 @@
 """ Tests the pytest_speedy.py plugin for pytest """
+import sample
 
 
 # def test_addoption():

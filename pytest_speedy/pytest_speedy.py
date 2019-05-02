@@ -1,9 +1,9 @@
 """ Checks the tests with the fastest efficiency first """
 
+from functools import wraps
 import pytest
 import sys
 import time
-from functools import wraps
 
 this_duration = []
 tracked_functions = []

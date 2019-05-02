@@ -43,37 +43,6 @@ def pytest_report_header():
         #     print(i)
 
 
-
-# pylint: disable=unused-variable
-# pylint: disable=unused-argument
-# @pytest.fixture(autouse=True)
-# def execution():
-#     """ Docstring """
-#     global this_duration
-#     # pylint: disable=redefined-builtin
-#     read_file = open("tests/test_compute_tf_cookbook.py")
-#     list = [
-#         item
-#         for item in ast.parse(read_file.read()).body
-#         if isinstance(item, ast.FunctionDef)
-#     ]
-#     for i in list:
-#         print("this is check duration")
-#         # key = "duration/" + request.node.nodeid.replace(";", "_")
-#         # nodeid's can have colons
-#         # keys become filenames within .cache
-#         # replace colons with something filename safe
-#         start_time = datetime.datetime.now()
-#         # yield
-#         stop_time = datetime.datetime.now()
-#         duration = (stop_time - start_time).total_seconds()
-#         # last_duration = cache.get(key, None)
-#         # cache.set(key, this_duration)
-#         # pylint: disable=unused-argument
-#         this_duration.append(duration)
-#         print(this_duration)
-
-
 def profile(f):
     """ Function for profile method """
     global this_duration
@@ -98,6 +67,7 @@ def pytest_collection_modifyitems(items):
 
     # Sorting list of Integers in ascending
 
+
 def sort(items):
     """ Function for sort """
     global sortedList
@@ -117,7 +87,6 @@ def test2(list):
     print("test2")
     print("Success?")
     print("Success?")
-
 
 
 def test3(list):

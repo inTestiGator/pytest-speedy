@@ -1,5 +1,5 @@
 codecov:
-  token: 216ba04a-be30-458f-b73d-4452dc4ed5c3
+  # token: 216ba04a-be30-458f-b73d-4452dc4ed5c3
   max_report_age: off
 
 comment: false
@@ -20,8 +20,8 @@ coverage:
       default:
         enabled: no
         if_not_found: success
-    fixes:
-      - "before/test-*::after/"
-      - "before/::after/"  # move path   e.g., "before/path" => "after/path"
-      - "::after/"         # move root   e.g., "path/" => "after/path/"
-      - "before/::"        # reduce root e.g., "before/path/" => "path/"
+    # fixes:
+    #   - "before/test-*::after/"
+    #   - "before/::after/"  # move path   e.g., "before/path" => "after/path"
+    #   - "::after/"         # move root   e.g., "path/" => "after/path/"
+    #   - "before/::"        # reduce root e.g., "before/path/" => "path/"

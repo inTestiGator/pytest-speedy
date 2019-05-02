@@ -72,7 +72,7 @@ def profile(f):
 
     # Sorting list of Integers in ascending
 
-
+# pylint: disable = unused-argument
 def sort(items):
     """ Function for sort """
     # pylint: disable = global-statement

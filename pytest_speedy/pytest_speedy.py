@@ -90,6 +90,7 @@ def test2(list):
 
 
 def test3(list):
+    """ Example test three. """
     print("test2")
     print("Success?")
     print("Success?")

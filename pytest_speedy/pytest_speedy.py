@@ -1,7 +1,6 @@
 """ Checks the tests with the fastest efficiency first """
 
 from functools import wraps
-import sys
 import time
 import pytest
 

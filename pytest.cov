@@ -1,4 +1,5 @@
 [run]
 # omit the tests for test coverage monitoring
-omit=tests/*, .venv/*
-include=pytest_speedy*
+omit=tests/*, tests/*
+# run modules in src
+include=pytest_speedy/*.py

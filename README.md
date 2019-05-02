@@ -3,7 +3,7 @@
 ![logo](.github/pytest-speedy_logo.png "pytest-speedy")
 
 [![Build Status](https://api.travis-ci.com/inTestiGator/pytest-speedy.svg?branch=master)](https://travis-ci.com/inTestiGator/pytest-speedy)
-[![codecov.io](http://codecov.io/github/inTestiGator/pytest-speedy/coverage.svg?branch=master)](http://codecov.io/github/inTestiGator/pytest-speedy?branch=master)
+[![codecov](https://codecov.io/gh/inTestiGator/pytest-speedy/branch/master/graphs/badge.svg?branch=master)](https://codecov.io/gh/inTestiGator/pytest-speedy)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-purple.svg)](https://www.python.org/)
 
 ## Overview of pytest-speedy
@@ -72,4 +72,11 @@ terminal window:
 
 ```
 pytest -s
+```
+
+To test the code coverage of the program, you can look click on the badge and view
+the most recent commits, or type this command in the terminal window:
+
+```
+pipenv run pytest tests/ --cov-config pytest.cov --cov-report term-missing --cov
 ```

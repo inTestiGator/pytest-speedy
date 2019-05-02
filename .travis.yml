@@ -16,7 +16,7 @@ env:
     - PIPENV_IGNORE_VIRTUALENVS=1
     - LANG=en_US.UTF-8
     - LC_ALL=en_US.UTF-8
-    - secure: 216ba04a-be30-458f-b73d-4452dc4ed5c3
+    - CODECOV_TOKEN="216ba04a-be30-458f-b73d-4452dc4ed5c3"
 
 # # install mdl for checking Markdown
 before_install:
@@ -30,7 +30,6 @@ install:
   - pip install --upgrade pip
   - pip install --upgrade pipenv
   - pipenv install --dev
-  - pipenv install codecov
 
 perform testing:
 # --> run the test suite with pytest and codecov
@@ -42,7 +41,7 @@ perform testing:
 # --> lint the README documentation with mdl
 script:
   - shopt -s globstar
-  - pipenv run pytest --cov-config pytest.cov --cov
+  - pipenv run pytest -x -s --cov-config pytest.cov --cov-report term-missing --cov
   - pipenv run black **/*.py --check
   - pipenv run flake8 **/*.py
   - pipenv run pylint **/*.py
@@ -50,4 +49,4 @@ script:
 
 # report coverage information to CodeCov
 after_success:
-  - codecov
+  - pipenv run codecov

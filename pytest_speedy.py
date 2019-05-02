@@ -13,6 +13,8 @@ from functools import wraps
 
 this_duration = []
 tracked_functions = []
+sortedList = []
+
 
 def pytest_addoption(parser):
     """ Print speed of tests to header with --speedy """
@@ -29,9 +31,23 @@ def pytest_report_header():
     The program is executed via the execution function
     if speedy is called in the terminal window
     """
+    global tracked_functions
     # pylint: disable=no-member
     if pytest.config.getoption("speedy"):
-        execution()
+        # execution()
+        # join points
+        # add test functions to tracked functions
+        tracked_functions = [test, test2, test3]
+        # weaver
+        for func in tracked_functions:
+            globals()[func.__name__] = profile(func)
+
+
+            # print(profile(test))
+        sortedList = sort(test2(test(test3(sys.argv[1]))))
+        # for i in sortedList[i]:
+        #     print(i)
+
 
 
 # pylint: disable=unused-variable

@@ -26,6 +26,7 @@ def pytest_report_header():
     The program is executed via the execution function
     if speedy is called in the terminal window
     """
+    # pylint: disable = global-statement
     global tracked_functions
     # pylint: disable=no-member
     if pytest.config.getoption("speedy"):

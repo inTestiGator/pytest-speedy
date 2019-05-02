@@ -29,7 +29,7 @@ def pytest_report_header():
 # pylint: disable=unused-argument
 # @pytest.fixture(autouse=True)
 def execution():
-    """ Docstring """
+    """ Checks the duration of test cases. """
     # pylint: disable=redefined-builtin
     read_file = open("tests/test_compute_tf_cookbook.py")
     list = [

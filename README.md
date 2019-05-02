@@ -4,7 +4,7 @@
 
 [![Build Status](https://api.travis-ci.com/inTestiGator/pytest-speedy.svg?branch=master)](https://travis-ci.com/inTestiGator/pytest-speedy)
 [![codecov](https://codecov.io/gh/inTestiGator/pytest-speedy/branch/master/graphs/badge.svg?branch=master)](https://codecov.io/gh/inTestiGator/pytest-speedy)
-[![made-with-python](https://img.shields.io/badge/Made%20with-Python-purple.svg)](https://www.python.org/)
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-yellow.svg)](https://www.python.org/)
 
 ## Overview of pytest-speedy
 

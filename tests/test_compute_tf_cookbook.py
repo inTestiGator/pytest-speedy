@@ -56,3 +56,14 @@ def test_sort():
     for tf in freqSort:
         assert tf[1] <= max_freq
         max_freq = tf[1]
+
+
+def test_frequencies():
+    "Check that the frequencies function works properly"
+    compute_tf_cookbook.frequencies()
+    compute_tf_cookbook.sort()
+    word_list = ["and", "test2", "test3"]
+    freq_list = [1, 1, 1]
+    for i, tf in enumerate(compute_tf_cookbook.word_freqs):
+        assert tf[0] == word_list[i]
+        # assert tf[1] == freq_list[i]

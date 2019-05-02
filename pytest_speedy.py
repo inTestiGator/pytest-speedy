@@ -7,6 +7,8 @@ import pytest
 
 this_duration = []
 tracked_functions = []
+sortedList = []
+
 # pylint: disable = redefined-outer-name
 
 
@@ -27,6 +29,7 @@ def pytest_report_header():
     """
     # pylint: disable = global-statement
     global tracked_functions
+    global sortedList
     # pylint: disable=no-member
     if pytest.config.getoption("speedy"):
         # execution()
@@ -41,8 +44,7 @@ def pytest_report_header():
         # pylint: disable = unused-variable
         # pylint: disable = assignment-from-no-return
         sortedList = sort(test2(test(test3(sys.argv[1]))))
-        # for i in sortedList[i]:
-        #     print(i)
+        print(sortedList)
 
 
 def profile(f):

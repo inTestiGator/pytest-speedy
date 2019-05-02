@@ -40,6 +40,7 @@ def pytest_report_header():
 
 
             # print(profile(test))
+        # pylint: disable = unused-variable
         sortedList = sort(test2(test(test3(sys.argv[1]))))
         # for i in sortedList[i]:
         #     print(i)

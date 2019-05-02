@@ -49,6 +49,7 @@ def profile(f):
     """ Function for profile method """
     # pylint: disable = global-statement
     global this_duration
+
     @wraps(f)
     def profilewrapper(*arg, **kw):
         start_time = time.time()
@@ -68,7 +69,7 @@ def profile(f):
 #         funcItem = item.function
 #         profile(funcItem)
 
-    # Sorting list of Integers in ascending
+# Sorting list of Integers in ascending
 
 # pylint: disable = unused-argument
 def sort(items):

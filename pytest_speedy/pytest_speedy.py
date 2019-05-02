@@ -2,8 +2,8 @@
 
 from functools import wraps
 import sys
-import pytest
 import time
+import pytest
 
 this_duration = []
 tracked_functions = []

@@ -38,7 +38,6 @@ def pytest_report_header():
         for func in tracked_functions:
             globals()[func.__name__] = profile(func)
 
-
             # print(profile(test))
         # pylint: disable = unused-variable
         # pylint: disable = assignment-from-no-return
@@ -51,6 +50,7 @@ def profile(f):
     """ Function for profile method """
     # pylint: disable = global-statement
     global this_duration
+
     @wraps(f)
     def profilewrapper(*arg, **kw):
         start_time = time.time()
@@ -70,7 +70,7 @@ def profile(f):
 #         funcItem = item.function
 #         profile(funcItem)
 
-    # Sorting list of Integers in ascending
+# Sorting list of Integers in ascending
 
 # pylint: disable = unused-argument
 def sort(items):
@@ -82,6 +82,7 @@ def sort(items):
     print("reordering:")
     print(new_duration)
     # return sorted(sortedList.sort(ret_value))
+
 
 # pylint: disable = redefined-builtin
 def test(list):

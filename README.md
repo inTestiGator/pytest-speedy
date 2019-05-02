@@ -73,3 +73,10 @@ terminal window:
 ```
 pytest -s
 ```
+
+To test the code coverage of the program, you can look click on the badge and view the
+most recent commits, or type this command in the terminal window:
+
+```
+pipenv run pytest tests/ --cov-config pytest.cov --cov-report term-missing --cov
+```

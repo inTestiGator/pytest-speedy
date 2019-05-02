@@ -80,29 +80,19 @@ def pytest_report_header():
 #         print(this_duration)
 
 
+def profile(f):
+    """ Function for profile method """
     global this_duration
-    # pylint: disable=redefined-builtin
-    read_file = open("tests/test_compute_tf_cookbook.py")
-    list = [
-        item
-        for item in ast.parse(read_file.read()).body
-        if isinstance(item, ast.FunctionDef)
-    ]
-    for i in list:
-        print("this is check duration")
-        # key = "duration/" + request.node.nodeid.replace(";", "_")
-        # nodeid's can have colons
-        # keys become filenames within .cache
-        # replace colons with something filename safe
-        start_time = datetime.datetime.now()
-        # yield
-        stop_time = datetime.datetime.now()
-        duration = (stop_time - start_time).total_seconds()
-        # last_duration = cache.get(key, None)
-        # cache.set(key, this_duration)
-        # pylint: disable=unused-argument
-        this_duration.append(duration)
-        print(this_duration)
+    @wraps(f)
+    def profilewrapper(*arg, **kw):
+        start_time = time.time()
+        ret_value = f(*arg, **kw)
+        elapsed = time.time() - start_time
+        print("%s(...) took %s secs" % (f.__name__, elapsed))
+        this_duration.append(elapsed)
+        return ret_value
+
+    return profilewrapper
 
 
 def pytest_collection_modifyitems(items):

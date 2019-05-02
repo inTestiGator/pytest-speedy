@@ -84,6 +84,7 @@ def test(list):
 
 
 def test2(list):
+    """ Example test two. """
     print("test2")
     print("Success?")
     print("Success?")

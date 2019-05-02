@@ -74,8 +74,6 @@ def profile(f):
 # pylint: disable = unused-argument
 def sort(items):
     """ Function for sort """
-    # pylint: disable = global-statement
-    global sortedList
     new_duration = sorted(this_duration)
     print(this_duration)
     print("reordering:")

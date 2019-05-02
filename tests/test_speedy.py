@@ -1,6 +1,5 @@
 """ Tests the pytest_speedy.py plugin for pytest """
 
-# pylint: disable=unused-imports
 
 
 # def test_addoption():

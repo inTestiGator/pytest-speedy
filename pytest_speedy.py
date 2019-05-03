@@ -7,7 +7,6 @@ import pytest
 this_duration = []
 tracked_functions = []
 sortedList = []
-
 # pylint: disable = redefined-outer-name
 
 
@@ -60,7 +59,6 @@ def profile(f):
 
 def pytest_collection_modifyitems(items):
     """ Hook used for reordering the tests in the file """
-    read_file = open("tests/test_compute_tf_cookbook.py")
     for item in items:
         funcItem = item.function
         profile(funcItem)
@@ -87,8 +85,8 @@ def testOne(list):
 
 
 def testTwo(list):
-    print()
     """ Example test two. """
+    print()
     print("Sample of Test 2")
 
 

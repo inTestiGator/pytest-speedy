@@ -58,7 +58,7 @@ def profile(f):
 
 
 def pytest_collection_modifyitems(items):
-    """ reordering """
+    """ Hook used for reordering the tests in the file """
     read_file = open("tests/test_compute_tf_cookbook.py")
     for item in items:
         funcItem = item.function
@@ -67,15 +67,14 @@ def pytest_collection_modifyitems(items):
 
 # pylint: disable = unused-argument
 def sort(items):
-    """ Function for sort """
+    """ Function that sorts the list of durations calculated in the profile function """
     new_duration = sorted(this_duration)
     print()
-    print("Creating a list of the Results")
+    print("Creating a list of the Results:")
     print(this_duration)
     print()
     print("Reordering the list of the Results: ")
     print(new_duration)
-    # return sorted(sortedList.sort(ret_value))
 
 
 # pylint: disable = redefined-builtin

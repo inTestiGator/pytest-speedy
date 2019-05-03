@@ -4,11 +4,6 @@ import pytest
 import pytest_speedy
 
 
-def test_addoption():
-    """test addoption"""
-    assert True
-
-
 def test_profile():
     """Testing profile function within pytest_speedy """
     tracked_functions = []
@@ -20,6 +15,7 @@ def test_profile():
 
 def test_sort():
     """Test sort function within pytest_speedy"""
-    list = [1, 3, 4, 2]
-    sortList = pytest_speedy.sort(list)
+    example = [1, 3, 4, 2]
+    # pylint: disable=assignment-from-no-return
+    sortList = pytest_speedy.sort(example)
     assert sortList is None

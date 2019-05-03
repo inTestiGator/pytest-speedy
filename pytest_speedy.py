@@ -1,4 +1,4 @@
-""" Checks the tests with the fastest efficiency first """
+""" Program that times the tests in a file and sorts them by fastest time first """
 
 import sys
 import time

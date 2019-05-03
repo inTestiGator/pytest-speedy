@@ -22,10 +22,7 @@ def pytest_addoption(parser):
 
 
 def pytest_report_header():
-    """
-    The program is executed via the execution function
-    if speedy is called in the terminal window
-    """
+    """ The program is executed if '--speedy' is called in the terminal window """
     # pylint: disable = global-statement
     global tracked_functions
     global sortedList

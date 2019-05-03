@@ -37,7 +37,8 @@ def pytest_report_header():
         # pylint: disable = unused-variable
         # pylint: disable = assignment-from-no-return
         sortedList = sort(testThree(testTwo(testOne(sys.argv[1]))))
-        print(sortedList)
+        print()
+        # print(sortedList)
 
 
 def profile(f):
@@ -80,15 +81,18 @@ def sort(items):
 # pylint: disable = redefined-builtin
 def testOne(list):
     """ Example test one. """
+    print()
     print("Sample of Test 1")
 
 
 
 def testTwo(list):
+    print()
     """ Example test two. """
     print("Sample of Test 2")
 
 
 def testThree(list):
     """ Example test three. """
+    print()
     print("Sample of Test 3")

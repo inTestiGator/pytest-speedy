@@ -45,7 +45,6 @@ def profile(f):
     # pylint: disable = global-statement
     global this_duration
 
-
     def profilewrapper(*arg, **kw):
         start_time = time.time()
         ret_value = f(*arg, **kw)
@@ -81,7 +80,6 @@ def testOne(list):
     """ Example test one. """
     print()
     print("Sample of Test 1")
-
 
 
 def testTwo(list):

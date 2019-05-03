@@ -33,7 +33,7 @@ def pytest_report_header():
         # weaver function
         for func in tracked_functions:
             globals()[func.__name__] = profile(func)
-        # pylint: diable = useless-supression
+        # pylint: disable = useless-supression
         # pylint: disable = unused-variable
         # pylint: disable = assignment-from-no-return
         sortedList = sort(testThree(testTwo(testOne(sys.argv[1]))))

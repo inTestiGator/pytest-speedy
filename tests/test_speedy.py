@@ -1,6 +1,5 @@
 """ Tests the pytest_speedy.py plugin for pytest """
 
-import pytest
 import pytest_speedy
 
 

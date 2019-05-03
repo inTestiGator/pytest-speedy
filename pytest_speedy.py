@@ -53,7 +53,7 @@ def profile(f):
     # pylint: disable = global-statement
     global this_duration
 
-    @wraps(f)
+
     def profilewrapper(*arg, **kw):
         start_time = time.time()
         ret_value = f(*arg, **kw)

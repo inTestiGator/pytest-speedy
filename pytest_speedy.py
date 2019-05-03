@@ -1,6 +1,5 @@
-""" Checks the tests with the fastest efficiency first """
+""" Program that times the tests in a file and sorts them by fastest time first """
 
-from functools import wraps
 import sys
 import time
 import pytest
@@ -8,8 +7,6 @@ import pytest
 this_duration = []
 tracked_functions = []
 sortedList = []
-
-# pylint: disable = redefined-outer-name
 
 
 def pytest_addoption(parser):
@@ -23,36 +20,30 @@ def pytest_addoption(parser):
 
 
 def pytest_report_header():
-    """
-    The program is executed via the execution function
-    if speedy is called in the terminal window
-    """
+    """ The program is executed if '--speedy' is called in the terminal window """
     # pylint: disable = global-statement
     global tracked_functions
     global sortedList
     # pylint: disable=no-member
     if pytest.config.getoption("speedy"):
-        # execution()
-        # join points
-        # add test functions to tracked functions
-        tracked_functions = [test, test2, test3]
-        # weaver
+        # adding test functions to list called tracked_functions
+        tracked_functions = [testOne, testTwo, testThree]
+        # tracked_fuctions = [test for test in dir(sort)
+        # if callable(getattr(sort, test)) and not test.startswith("__")]
+        # weaver function
         for func in tracked_functions:
             globals()[func.__name__] = profile(func)
-
-            # print(profile(test))
-        # pylint: disable = unused-variable
         # pylint: disable = assignment-from-no-return
-        sortedList = sort(test2(test(test3(sys.argv[1]))))
-        print(sortedList)
+        sortedList = sort(testThree(testTwo(testOne(sys.argv[1]))))
+        print()
+        # print(sortedList)
 
 
 def profile(f):
-    """ Function for profile method """
+    """ Function that times the test cases by using aspect oriented programming """
     # pylint: disable = global-statement
     global this_duration
 
-    @wraps(f)
     def profilewrapper(*arg, **kw):
         start_time = time.time()
         ret_value = f(*arg, **kw)
@@ -64,41 +55,39 @@ def profile(f):
     return profilewrapper
 
 
-# def pytest_collection_modifyitems(items):
-#     """ reordering """
-#     read_file = open("tests/test_compute_tf_cookbook.py")
-#     for item in items:
-#         funcItem = item.function
-#         profile(funcItem)
+def pytest_collection_modifyitems(items):
+    """ Hook used for reordering the tests in the file """
+    for item in items:
+        funcItem = item.function
+        profile(funcItem)
 
-# Sorting list of Integers in ascending
 
 # pylint: disable = unused-argument
 def sort(items):
-    """ Function for sort """
+    """ Function that sorts the list of durations calculated in the profile function """
     new_duration = sorted(this_duration)
+    print()
+    print("Creating a list of the Results:")
     print(this_duration)
-    print("reordering:")
+    print()
+    print("Reordering the list of the Results: ")
     print(new_duration)
-    # return sorted(sortedList.sort(ret_value))
 
 
 # pylint: disable = redefined-builtin
-def test(list):
+def testOne(list):
     """ Example test one. """
-    print("Test1: True")
-    return list
+    print()
+    print("Sample of Test 1")
 
 
-def test2(list):
+def testTwo(list):
     """ Example test two. """
-    print("test2")
-    print("Success?")
-    print("Success?")
+    print()
+    print("Sample of Test 2")
 
 
-def test3(list):
+def testThree(list):
     """ Example test three. """
-    print("test2")
-    print("Success?")
-    print("Success?")
+    print()
+    print("Sample of Test 3")

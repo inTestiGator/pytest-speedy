@@ -29,7 +29,8 @@ def pytest_report_header():
     if pytest.config.getoption("speedy"):
         # adding test functions to list called tracked_functions
         tracked_functions = [testOne, testTwo, testThree]
-        # tracked_fuctions = [test for test in dir(sort) if callable(getattr(sort, test)) and not test.startswith("__")]
+        # tracked_fuctions = [test for test in dir(sort)
+        # if callable(getattr(sort, test)) and not test.startswith("__")]
         # weaver function
         for func in tracked_functions:
             globals()[func.__name__] = profile(func)

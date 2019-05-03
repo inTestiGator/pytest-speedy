@@ -34,7 +34,7 @@ def pytest_report_header():
         # execution()
         # join points
         # add test functions to tracked functions
-        tracked_functions = [test, test2, test3]
+        tracked_functions = [testOne, testTwo, testThree]
         # tracked_fuctions = [test for test in dir(sort) if callable(getattr(sort, test)) and not test.startswith("__")]
         # weaver
         for func in tracked_functions:
@@ -43,7 +43,7 @@ def pytest_report_header():
             # print(profile(test))
         # pylint: disable = unused-variable
         # pylint: disable = assignment-from-no-return
-        sortedList = sort(test2(test(test3(sys.argv[1]))))
+        sortedList = sort(testThree(testTwo(testOne(sys.argv[1]))))
         print(sortedList)
         # print(tracked_fuctions)
 
@@ -77,28 +77,27 @@ def pytest_collection_modifyitems(items):
 def sort(items):
     """ Function for sort """
     new_duration = sorted(this_duration)
+    print()
+    print("Creating a list of the Results")
     print(this_duration)
-    print("reordering:")
+    print()
+    print("Reordering the list of the Results: ")
     print(new_duration)
     # return sorted(sortedList.sort(ret_value))
 
 
 # pylint: disable = redefined-builtin
-def test(list):
+def testOne(list):
     """ Example test one. """
-    print("Test1: True")
-    return list
+    print("Sample of Test 1")
 
 
-def test2(list):
+
+def testTwo(list):
     """ Example test two. """
-    print("test2")
-    print("Success?")
-    print("Success?")
+    print("Sample of Test 2")
 
 
-def test3(list):
+def testThree(list):
     """ Example test three. """
-    print("test2")
-    print("Success?")
-    print("Success?")
+    print("Sample of Test 3")

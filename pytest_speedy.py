@@ -35,6 +35,7 @@ def pytest_report_header():
         # join points
         # add test functions to tracked functions
         tracked_functions = [test, test2, test3]
+        # tracked_fuctions = [test for test in dir(sort) if callable(getattr(sort, test)) and not test.startswith("__")]
         # weaver
         for func in tracked_functions:
             globals()[func.__name__] = profile(func)
@@ -44,6 +45,7 @@ def pytest_report_header():
         # pylint: disable = assignment-from-no-return
         sortedList = sort(test2(test(test3(sys.argv[1]))))
         print(sortedList)
+        # print(tracked_fuctions)
 
 
 def profile(f):
